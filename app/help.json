@@ -1,0 +1,12 @@
+{
+  "addsound": "Permet d'ajouter un son en joignant un fichier (.wav, .mp3, .ogg) au message",
+  "exitbot": "⚠ *Expérimental* Permet de faire sortir le bot de son channel.",
+  "help": "Permet d'afficher cette liste.",
+  "listsounds": "Permet de lister les sons disponibles. (listsound**s** avec un **s** maintenant)",
+  "ping": "Permet de tester la reception du bot.",
+  "soundban": "Permet a une personne opératrice de bannir une personne non-opératrice. (Une personne banni ne peut plus lancer de son)",
+  "sounddeban": "Permet a une personne opératrice de débannir quelqu'un.",
+  "sounddeop": "Permet a une personne opératrice de supprimer les droits d'une personne opératrice.",
+  "soundop": "Permet a une personne opératrice de rendre une personne opératrice.",
+  "stopsound": "⚠ *Expérimental* Permet de stoper un son trop long. Ce bot n'est pas fait pour jouer des musiques.\nNote: Je créerais surrement un bot musique, avant 2017."
+}

@@ -1,0 +1,9 @@
+/node_modules
+/mp3
+/.git
+/.idea
+.env
+config.json
+configdevprod.json
+tenc
+/sound/*

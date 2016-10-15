@@ -1,0 +1,9 @@
+{
+  "token": "TOKEN",
+  "mysql_host": "localhost",
+  "mysql_user": "user",
+  "mysql_password": "password",
+  "mysql_database": "ron",
+  "prefix_sound": "Symbole avant le nom du son",
+  "prefix_command": "Symbole avant le nom d'une command (/!\\ ne pas mettre le même que pour le son)"
+}

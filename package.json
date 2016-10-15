@@ -1,0 +1,24 @@
+{
+  "name": "ron",
+  "version": "0.2.0",
+  "description": "Un bot français et open source :).",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "discord.io": "",
+    "fs": "",
+    "mysql": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ComFoxx <contact@comfoxx.fr>",
+  "license": "MIT",
+  "keywords": [
+    "bot",
+    "discord",
+    "robot",
+    "son",
+    "sound"
+  ]
+}
