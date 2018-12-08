@@ -1,0 +1,9 @@
+node_modules
+TOKEN
+TOKEN_*
+config.json
+config_*.json
+package-lock.json
+ecosystem.config.js
+deploy.bat
+rsync_exclusion

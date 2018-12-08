@@ -1,0 +1,15 @@
+{
+    "message": {
+        "join": "Hey {member} ! Bievenue sur le serveur **{guild}**",
+        "left": "{member} n'est plus des notres ! 🙁",
+        "playYoutubeSuccess": "Lancement de ",
+        "exitVocal": "Arrêt du son joué",
+        "error": "Quelque chose ne s'est malheureusement pas passé comme prévu 🙁"
+    },
+    "prefix": {
+        "playYoutube": "¤",
+        "exitVocal": "°"
+    },
+    "joinChannel": "general",
+    "leftChannel": "general"
+}
