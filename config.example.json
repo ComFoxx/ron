@@ -3,13 +3,25 @@
         "join": "Hey {member} ! Bievenue sur le serveur **{guild}**",
         "left": "{member} n'est plus des notres ! 🙁",
         "playYoutubeSuccess": "Lancement de ",
+        "playYoutubeAddList": "Ajout à la liste de ",
         "exitVocal": "Arrêt du son joué",
-        "error": "Quelque chose ne s'est malheureusement pas passé comme prévu 🙁"
+        "error": "Quelque chose ne s'est malheureusement pas passé comme prévu 🙁",
+        "roleSuccess": "Le role **{role}** vous a été attribué.",
+        "roleRemoveSuccess": "Le role **{role}** vous a été retiré",
+        "roleError": "Le role **{role}** n'existe pas ou ne peut pas vous être attribué."
     },
     "prefix": {
         "playYoutube": "¤",
-        "exitVocal": "°"
+        "exitVocal": "°",
+        "role": "%"
     },
     "joinChannel": "general",
-    "leftChannel": "general"
+    "leftChannel": "general",
+    "role": [
+        {
+            "name": "Awsome Role",
+            "role": "155706340612767746"
+        }
+    ],
+    "youtubeKey": "***** Write a youtube api key here *****"
 }

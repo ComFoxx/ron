@@ -7,6 +7,7 @@ const config = JSON.parse(fs.readFileSync(process.argv[3] == null ? 'config.json
 
 const PlayYoutube = require('./commands/playYoutube')
 const ExitVocal = require('./commands/exitVocal')
+const Role = require('./commands/role')
 
 bot.on('ready', () => {
     console.log('Connected with the id : ' + bot.user.id + ', and the username : ' + bot.user.username)
@@ -28,7 +29,7 @@ bot.on('guildMemberRemove', member => {
 
 bot.on('message', message => {
 
-    PlayYoutube.parse(message, config) || ExitVocal.parse(message, config)
+    PlayYoutube.parse(message, config) || ExitVocal.parse(message, config) || Role.parse(message, config)
 
 })
 

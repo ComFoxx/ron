@@ -57,18 +57,18 @@ module.exports = class PlayYoutube extends command {
             opts.key = config.youtubeKey
         }
         if (message.guild.voiceConnection && message.guild.voiceConnection.dispatcher) {
-            this.list.push(message.content.substr(config.prefix.playYoutube.length))
-            console.log(message.author.username + ' add ' + message.content.substr(config.prefix.playYoutube.length) + ' to the list')
-            message.reply(config.message.playYoutubeAddList + message.content.substr(config.prefix.playYoutube.length))
+            this.list.push(message.content.substr(config.prefix.playYoutube.length).trim())
+            console.log(message.author.username + ' add ' + message.content.substr(config.prefix.playYoutube.length).trim() + ' to the list')
+            message.reply(config.message.playYoutubeAddList + message.content.substr(config.prefix.playYoutube.length).trim())
             message.delete()
         } else {
             this.list = []
             message.member.voiceChannel.join()
                 .then(connection => {
-                    this.play(message.content.substr(config.prefix.playYoutube.length), connection).then((good) => {
+                    this.play(message.content.substr(config.prefix.playYoutube.length).trim(), connection).then((good) => {
                         if (good) {
-                            console.log(message.author.username + ' play ' + message.content.substr(config.prefix.playYoutube.length))
-                            message.reply(config.message.playYoutubeSuccess + message.content.substr(config.prefix.playYoutube.length))
+                            console.log(message.author.username + ' play ' + message.content.substr(config.prefix.playYoutube.length).trim())
+                            message.reply(config.message.playYoutubeSuccess + message.content.substr(config.prefix.playYoutube.length).trim())
                             message.delete()
                         } else {
                             message.reply(config.message.error)
