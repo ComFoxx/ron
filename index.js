@@ -17,14 +17,14 @@ bot.on('guildMemberAdd', member => {
     console.log(member.displayName + ' join the guild ' + member.guild.name)
     const channel = member.guild.channels.find(ch => ch.name === config.joinChannel)
     if (!channel) { return; }
-    channel.send(config.message.join.replace(/{member}/, member.displayName).replace(/{guild}/, member.guild.name))
+    channel.send(config.message.join.replace(/{member}/, member).replace(/{guild}/, member.guild.name))
 })
 
 bot.on('guildMemberRemove', member => {
     console.log(member.displayName + ' quit the guild ' + member.guild.name)
     const channel = member.guild.channels.find(ch => ch.name === config.leftChannel)
     if(!channel) { return; }
-    channel.send(config.message.left.replace(/{member}/, member.displayName).replace(/{guild}/, member.guild.name))
+    channel.send(config.message.left.replace(/{member}/, member).replace(/{guild}/, member.guild.name))
 })
 
 bot.on('message', message => {
