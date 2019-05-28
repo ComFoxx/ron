@@ -8,14 +8,14 @@ module.exports = class Role extends command {
 
     static action (message, config) {
         if (config.role.every(a => {
-            if (a.name === message.content.substr(config.prefix.role.length).trim()) {
+            if (a.name.toUpperCase() === message.content.substr(config.prefix.role.length).trim().toUpperCase()) {
                 if (message.member.roles.get(a.id)) {
                     message.member.removeRole(a.id).catch(e => { message.reply(config.message.error); console.log('Role error :', e) })
-                    message.reply(config.message.roleRemoveSuccess.replace(/{role}/, message.content.substr(config.prefix.role.length).trim()))
+                    message.reply(config.message.roleRemoveSuccess.replace(/{role}/, a.name))
                     console.log('Remove role [' + a.name + '] with id [' + a.id + '] to ' + message.author.username)
                 } else {
                     message.member.addRole(a.id).catch(e => { message.reply(config.message.error); console.log('Role error :', e) })
-                    message.reply(config.message.roleSuccess.replace(/{role}/, message.content.substr(config.prefix.role.length).trim()))
+                    message.reply(config.message.roleSuccess.replace(/{role}/, a.name))
                     console.log('Add role [' + a.name + '] with id [' + a.id + '] to ' + message.author.username)
                 }
                 return false;
