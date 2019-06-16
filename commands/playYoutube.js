@@ -5,7 +5,8 @@ const YoutubeSearch = require('youtube-search')
 const opts = {
     maxResults: 1,
     regionCode: 'FR',
-    relevanceLanguage: 'FR-fr'
+    relevanceLanguage: 'FR-fr',
+    type: 'video'
 }
 
 module.exports = class PlayYoutube extends command {
@@ -13,7 +14,7 @@ module.exports = class PlayYoutube extends command {
     static async play (url, connection) {
         try {
             if (/^https:\/\//.test(url) || /^http:\/\//.test(url)) {
-                var stream = YoutubeStream(url)
+                var stream = YoutubeStream(url, { filter: 'audioonly' })
             } else {
                 let search = await YoutubeSearch(url, opts).catch((e) => { throw e });
                 if (search.hasOwnProperty('results') && search.results.length > 0 && search.results[0].hasOwnProperty('link')) {
@@ -22,7 +23,7 @@ module.exports = class PlayYoutube extends command {
                     throw 'Search fail'
                 }
                 console.log(link)
-                var stream = YoutubeStream(link);
+                var stream = YoutubeStream(link, { filter: 'audioonly' });
             }
             connection.playStream(stream)
                 .on('error', e => {

@@ -7,3 +7,5 @@ package-lock.json
 ecosystem.config.js
 deploy.bat
 rsync_exclusion
+# Because I don't work directly on this directory, so it can be deprecated
+yarn.lock
